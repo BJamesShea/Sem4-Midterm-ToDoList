@@ -59,4 +59,15 @@ public class User {
 
         }
     }
+
+    public void clearAllTasks(){
+        Iterator<Task> iterator = tasks.iterator();
+        while (iterator.hasNext()){
+            Task task = iterator.next();
+            if (task.getIsCompleted()){
+                iterator.remove();
+            }
+
+        }
+    }
 }
