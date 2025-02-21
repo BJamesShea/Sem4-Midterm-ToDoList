@@ -13,7 +13,7 @@ public class Task {
         return description;
     }
 
-    public boolean isCompleted() { // apparently booleans shouldn't be getIsCompleted. -B.S Feb 21
+    public boolean getIsCompleted() { // apparently booleans shouldn't be getIsCompleted. -B.S Feb 21
         return isCompleted;
     }
 

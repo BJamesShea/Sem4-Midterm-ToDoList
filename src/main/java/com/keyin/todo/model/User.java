@@ -21,4 +21,28 @@ public class User {
         return tasks;
     }
 
+    public void addTask(String description){
+        tasks.add(new Task(description));
+    }
+
+    public boolean completeTask(String description){
+        for (Task task : tasks) {
+            if (task.getDescription().equalsIgnoreCase(description) && !task.getIsCompleted()) {
+                task.markAsCompleted();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void viewTasks(){
+        if (tasks.isEmpty()) {
+            System.out.println("No tasks left! Great job!");
+        } else {
+            for (Task task : tasks) {
+                System.out.println(task);
+            }
+        }
+    }
+
 }
