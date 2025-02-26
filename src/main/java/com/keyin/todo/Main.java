@@ -28,7 +28,7 @@ public class Main {
 
             if (choice == 6) {
                 System.out.println("\nThanks for using my app! Goodbye!");
-                break;
+                return;
             }
 
             userCliChoice(choice);
