@@ -73,7 +73,7 @@ public class Main {
     private void addUser() {
         System.out.println("Enter the name of the new user: ");
         String name = scanner.nextLine();
-        User newUser = new User(name);
+        User newUser = new User(name.toLowerCase());
         toDoListManager.addUser(newUser);
         System.out.println("User " + name + " has been added successfully.");
     }
