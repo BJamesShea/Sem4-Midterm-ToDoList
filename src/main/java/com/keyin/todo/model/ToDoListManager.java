@@ -47,11 +47,13 @@ public class ToDoListManager {
     public void displayAllUsers(){
         if (users.isEmpty()){
             System.out.println("No users found!");
+
             return;
         }
 
+        System.out.println("Current Users:");
         for (User user : users){
-            System.out.println(user.getName());
+            System.out.println("- " + user.getName());
         }
     }
 

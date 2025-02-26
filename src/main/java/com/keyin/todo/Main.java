@@ -52,6 +52,18 @@ public class Main {
                    removeUser();
                    break;
 
+               case 3:
+                   findUser();
+                   break;
+
+               case 4:
+                   viewAllUsers();
+                   break;
+
+               case 5:
+                   selectUser();
+                   break;
+
 
            }
        }
@@ -72,7 +84,46 @@ public class Main {
            System.out.println("User " + name + " has been removed successfully.");
        }
 
+       private void findUser(){
+        System.out.println("Search for user: ");
+        String name = scanner.nextLine();
+
+        User foundUser = toDoListManager.findUserByName(name);
+
+        if(foundUser != null){
+            System.out.println("User " + name + " found.");
+        } else {
+            System.out.println("User " + name + " not found.");
+        }
+    }
+
+        private void viewAllUsers(){
+            toDoListManager.displayAllUsers();
+            System.out.println("Finding all users...");
 
 
+
+        }
+
+        private void selectUser(){
+            System.out.println("Enter the name of the user to manage their tasks: ");
+            String name = scanner.nextLine();
+
+            User selectedUser = toDoListManager.findUserByName(name);
+
+            if (selectedUser != null){
+                System.out.println("User " + name + " selected!");
+                manageUserTasks(selectedUser);
+            } else {
+                System.out.println("User not found.");
+            }
+        }
+
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Main app = new Main(scanner);
+        app.run();
+    }
 
 }
