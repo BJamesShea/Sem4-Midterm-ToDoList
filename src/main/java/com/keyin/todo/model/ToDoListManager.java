@@ -21,9 +21,6 @@ public class ToDoListManager {
         users.add(user);
     }
 
-    public List<User> getUsers() {
-        return users;
-    }
 
     public User findUserByName(String name){
         for (User user : users){

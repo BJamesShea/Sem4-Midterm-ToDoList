@@ -17,9 +17,6 @@ public class User {
         return tasks;
     }
 
-    public void addTask(String description) {
-        tasks.addTask(description);
-    }
 
     public void viewTasks() {
         tasks.viewTasks();
