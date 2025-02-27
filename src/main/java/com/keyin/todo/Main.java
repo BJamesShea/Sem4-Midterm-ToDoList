@@ -75,7 +75,6 @@ public class Main {
         String name = scanner.nextLine();
         User newUser = new User(name.toLowerCase());
         toDoListManager.addUser(newUser);
-        System.out.println("User " + name + " has been added successfully.");
     }
 
     private void removeUser() {
@@ -143,7 +142,7 @@ public class Main {
             case 1:
                 System.out.println("Enter task description:");
                 String description = scanner.nextLine();
-                user.addTask(description);
+                user.getTaskList().addTask(description);
                 System.out.println("Task added successfully!");
                 break;
             case 2:

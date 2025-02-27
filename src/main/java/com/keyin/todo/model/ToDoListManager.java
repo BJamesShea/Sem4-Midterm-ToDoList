@@ -14,6 +14,10 @@ public class ToDoListManager {
     }
 
     public void addUser(User user) {
+        if (findUserByName(user.getName()) != null){
+            System.out.println("Name already exists in database.");
+            return;
+        }
         users.add(user);
     }
 
